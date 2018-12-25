@@ -29,6 +29,6 @@ public class User {
 
         model.addAttribute("username",username+password);
         model.addAttribute("password",f);
-        return  "hello";
+        return  f;
     }
 }

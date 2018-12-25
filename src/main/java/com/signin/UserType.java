@@ -5,13 +5,14 @@ package com.signin;
  * des:
  */
 public enum UserType {
+    NotUse(0),
     Teaher(10),
     Student(20);
     int key;
     UserType(int i) {
         key=i;
     }
-    int getKey()
+    public int getKey()
     {
         return key;
     }
