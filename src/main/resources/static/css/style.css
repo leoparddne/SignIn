@@ -86,7 +86,7 @@ form {
   border-radius: 0.3em;
   -o-border-radius: 0.3em;
   -moz-border-radius: 0.3em;
-  -webkit- border-radius: 0.3em;
+  -webkit-border-radius:0.3em;
   margin:0.7em 0;
    background: url("../images/icons.png") no-repeat 14px 16px #474a55;
   }

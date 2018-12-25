@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,11 +10,11 @@
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
     />
     <!-- https://fonts.google.com/specimen/Roboto -->
-    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="/css/fontawesome.min.css" />
     <!-- https://fontawesome.com/ -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <!-- https://getbootstrap.com/ -->
-    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="/css/templatemo-style.css">
     
   </head>
 
@@ -22,7 +22,7 @@
     <div class="" id="home">
       <nav class="navbar navbar-expand-xl">
         <div class="container h-100">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/Teacher/index">
             <h1 class="tm-site-title mb-0">Product Admin</h1>
           </a>
           <button
@@ -40,7 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mx-auto h-100">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="/Teacher/index">
                   <i class="fas fa-tachometer-alt"></i> Dashboard
                   <span class="sr-only">(current)</span>
                 </a>
@@ -66,34 +66,21 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link active" href="accounts.html">
+                <a class="nav-link active" href="/Teacher/Accounts">
                   <i class="far fa-user"></i> Accounts
                 </a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
+              <li class="nav-item">
+                <a class="nav-link" href="/Teacher/Gen">
                   <i class="fas fa-cog"></i>
-                  <span> Settings <i class="fas fa-angle-down"></i> </span>
+                  Gen
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Profile</a>
-                  <a class="dropdown-item" href="#">Billing</a>
-                  <a class="dropdown-item" href="#">Customize</a>
-                </div>
               </li>
             </ul>
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link d-block" href="login.html">
-                  Admin, <b>Logout</b>
+                <a class="nav-link d-block" href="/">
+                   <b>Logout</b>
                 </a>
               </li>
             </ul>
@@ -123,7 +110,7 @@
               <h2 class="tm-block-title">Change Avatar</h2>
               <div class="tm-avatar-container">
                 <img
-                  src="img/avatar.png"
+                  src="/images/avatar.png"
                   alt="Avatar"
                   class="tm-avatar img-fluid mb-4"
                 />
@@ -210,9 +197,9 @@
      
     </div>
 
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <!-- https://jquery.com/download/ -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- https://getbootstrap.com/ -->
   </body>
 </html>

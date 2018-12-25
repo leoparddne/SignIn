@@ -31,12 +31,15 @@ public class UserService implements IUserService {
                 user u=userMapper.selectByExample(ex).get(0);
                 if(u.getType()==UserType.Teaher.getKey())
                 {
-                    result= "teacher";
+                    result= "/Teacher/index";
                 }
                 if(u.getType()==UserType.Student.getKey())
                 {
-                    result= "student";
+                    result= "/Student/index";
                 }
+            }else
+            {
+                return "index";
             }
         }catch (Exception e)
         {
