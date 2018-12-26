@@ -225,63 +225,73 @@ public class signinExample {
             return (Criteria) this;
         }
 
-        public Criteria andCodeidIsNull() {
-            addCriterion("codeid is null");
+        public Criteria andCodeIsNull() {
+            addCriterion("code is null");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidIsNotNull() {
-            addCriterion("codeid is not null");
+        public Criteria andCodeIsNotNull() {
+            addCriterion("code is not null");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidEqualTo(Integer value) {
-            addCriterion("codeid =", value, "codeid");
+        public Criteria andCodeEqualTo(String value) {
+            addCriterion("code =", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidNotEqualTo(Integer value) {
-            addCriterion("codeid <>", value, "codeid");
+        public Criteria andCodeNotEqualTo(String value) {
+            addCriterion("code <>", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidGreaterThan(Integer value) {
-            addCriterion("codeid >", value, "codeid");
+        public Criteria andCodeGreaterThan(String value) {
+            addCriterion("code >", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidGreaterThanOrEqualTo(Integer value) {
-            addCriterion("codeid >=", value, "codeid");
+        public Criteria andCodeGreaterThanOrEqualTo(String value) {
+            addCriterion("code >=", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidLessThan(Integer value) {
-            addCriterion("codeid <", value, "codeid");
+        public Criteria andCodeLessThan(String value) {
+            addCriterion("code <", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidLessThanOrEqualTo(Integer value) {
-            addCriterion("codeid <=", value, "codeid");
+        public Criteria andCodeLessThanOrEqualTo(String value) {
+            addCriterion("code <=", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidIn(List<Integer> values) {
-            addCriterion("codeid in", values, "codeid");
+        public Criteria andCodeLike(String value) {
+            addCriterion("code like", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidNotIn(List<Integer> values) {
-            addCriterion("codeid not in", values, "codeid");
+        public Criteria andCodeNotLike(String value) {
+            addCriterion("code not like", value, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidBetween(Integer value1, Integer value2) {
-            addCriterion("codeid between", value1, value2, "codeid");
+        public Criteria andCodeIn(List<String> values) {
+            addCriterion("code in", values, "code");
             return (Criteria) this;
         }
 
-        public Criteria andCodeidNotBetween(Integer value1, Integer value2) {
-            addCriterion("codeid not between", value1, value2, "codeid");
+        public Criteria andCodeNotIn(List<String> values) {
+            addCriterion("code not in", values, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeBetween(String value1, String value2) {
+            addCriterion("code between", value1, value2, "code");
+            return (Criteria) this;
+        }
+
+        public Criteria andCodeNotBetween(String value1, String value2) {
+            addCriterion("code not between", value1, value2, "code");
             return (Criteria) this;
         }
 

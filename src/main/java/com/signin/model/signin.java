@@ -7,7 +7,7 @@ public class signin {
 
     private Integer userid;
 
-    private Integer codeid;
+    private String code;
 
     private Date time;
 
@@ -27,12 +27,12 @@ public class signin {
         this.userid = userid;
     }
 
-    public Integer getCodeid() {
-        return codeid;
+    public String getCode() {
+        return code;
     }
 
-    public void setCodeid(Integer codeid) {
-        this.codeid = codeid;
+    public void setCode(String code) {
+        this.code = code == null ? null : code.trim();
     }
 
     public Date getTime() {

@@ -1,6 +1,7 @@
 package com.signin.service.impl;
 
 import com.signin.UserType;
+import com.signin.model.Data.UserInfo;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,5 +10,5 @@ import org.springframework.stereotype.Service;
  */
 
 public interface IUserService {
-    String Login(String username, String password, UserType type);
+    String Login(String username, String password, UserInfo user);
 }

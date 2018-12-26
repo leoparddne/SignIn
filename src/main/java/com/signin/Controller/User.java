@@ -1,7 +1,9 @@
 package com.signin.Controller;
 
 import com.signin.UserType;
+import com.signin.model.Data.UserInfo;
 import com.signin.service.UserService;
+import com.signin.service.impl.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -19,7 +21,7 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/User")
 public class User {
     @Autowired
-    private UserService userService;
+    private IUserService userService;
 
 //    @GetMapping( "    /Login")
     @RequestMapping(value = "/Login",method = RequestMethod.POST)
@@ -29,10 +31,10 @@ public class User {
 //                        Model model)
     )
     {
-
-        String result=userService.Login(username,password, UserType.Student);
+        UserInfo user=new UserInfo();
+        String result=userService.Login(username,password, user);
         HttpSession session = request.getSession();
-        session.setAttribute("user",username);
+        session.setAttribute("user",user.userID);
 //        model.addAttribute("username",username+password);
 //        model.addAttribute("password",f);
         return  "redirect:"+result;
