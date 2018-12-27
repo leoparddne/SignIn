@@ -273,7 +273,7 @@ jQuery.extend( {
 
 	isNumeric: function( obj ) {
 
-		// parseFloat NaNs numeric-cast false positives (null|true|false|"")
+		// parseFloat NaNs numeric-cast false posit (null|true|false|"")
 		// ...but misinterprets leading-number strings, particularly hex literals ("0x...")
 		// subtraction forces infinities to NaN
 		// adding 1 corrects loss of precision from parseFloat (#15100)
@@ -564,7 +564,7 @@ function isArrayLike( obj ) {
 
 	// Support: iOS 8.2 (not reproducible in simulator)
 	// `in` check used to prevent JIT error (gh-2145)
-	// hasOwn isn't used here due to false negatives
+	// hasOwn isn't used here due to false negat
 	// regarding Nodelist length in IE
 	var length = !!obj && "length" in obj && obj.length,
 		type = jQuery.type( obj );
@@ -3056,7 +3056,7 @@ jQuery.fn.extend( {
 		// Locate the position of the desired element
 		return jQuery.inArray(
 
-			// If it receives a jQuery object, the first element is used
+			// If it rece a jQuery object, the first element is used
 			elem.jquery ? elem[ 0 ] : elem, this );
 	},
 
@@ -3142,7 +3142,7 @@ jQuery.each( {
 				ret = jQuery.uniqueSort( ret );
 			}
 
-			// Reverse order for parents* and prev-derivatives
+			// Reverse order for parents* and prev-derivat
 			if ( rparentsprev.test( name ) ) {
 				ret = ret.reverse();
 			}
@@ -6776,7 +6776,7 @@ if ( window.getComputedStyle ) {
 		}
 
 		// From the awesome hack by Dean Edwards
-		// http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
+		// http://erik.eae.net/arch/2007/07/27/18.54.15/#comment-102291
 
 		// If we're not dealing with a regular pixel number
 		// but a number that has a weird ending, we need to convert it to pixels
@@ -9750,9 +9750,9 @@ jQuery.extend( {
 		}
 
 		// Callback for when everything is done
-		function done( status, nativeStatusText, responses, headers ) {
+		function done( status, nattatusText, responses, headers ) {
 			var isSuccess, success, error, response, modified,
-				statusText = nativeStatusText;
+				statusText = nattatusText;
 
 			// Called once
 			if ( state === 2 ) {
@@ -9833,7 +9833,7 @@ jQuery.extend( {
 
 			// Set data for the fake xhr object
 			jqXHR.status = status;
-			jqXHR.statusText = ( nativeStatusText || statusText ) + "";
+			jqXHR.statusText = ( nattatusText || statusText ) + "";
 
 			// Success/Error
 			if ( isSuccess ) {

@@ -1,7 +1,7 @@
 package com.signin;
 
 /**
- * @author:ives time:12/24/2018
+ * @author: time:12/24/2018
  * des:
  */
 public enum UserType {

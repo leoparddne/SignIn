@@ -3,7 +3,7 @@ package com.signin.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * @author:ives time:12/24/2018
+ * @author: time:12/24/2018
  * des:
  */
 @RequestMapping("/")

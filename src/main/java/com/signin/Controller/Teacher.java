@@ -1,15 +1,19 @@
 package com.signin.Controller;
 
+import com.signin.model.signin;
 import com.signin.service.impl.ICodeService;
+import com.signin.service.impl.ISignInService;
 import com.signin.service.impl.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -21,6 +25,8 @@ import java.util.Random;
 public class Teacher {
     @Autowired
     private ICodeService codeService;
+    @Autowired
+    private ISignInService signInService;
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
     public String Login()
@@ -53,5 +59,28 @@ public class Teacher {
             return "redirect:/";
         }
         return "/Teacher/Gen";
+    }
+
+    @RequestMapping(value = "/GetLatestData",method = RequestMethod.GET)
+    public  String GetLatestData(@RequestParam(required = false) String code, Model model)
+    {
+        try
+        {
+            if(code==null)
+            {
+                return "/Teacher/GetLatestData";
+            }
+            if(code.trim()=="")
+            {
+                return "/Teacher/GetLatestData";
+            }
+            List<signin> data=signInService.GetLeastData(code);
+            model.addAttribute("data",data);
+            return "/Teacher/GetLatestData";
+        }
+        catch (Exception e)
+        {
+            return "redirect:/Teacher/index";
+        }
     }
 }
